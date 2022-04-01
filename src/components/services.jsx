@@ -9,3 +9,5 @@ function services (props){
     </Box>
   );
 }
+
+export default services;
