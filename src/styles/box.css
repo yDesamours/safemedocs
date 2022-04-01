@@ -2,7 +2,7 @@
   height : 100vh;
   display : flex;
   flex-direction : column;  
-  justify-content : space-start;
+  justify-content : space-between;
 }
 
 .services{
