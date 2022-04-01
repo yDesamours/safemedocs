@@ -1,11 +1,13 @@
 .first_view{
   height : 100vh;
   display : flex;
+  flex-direction : row;
   flex-wrap : wrap;
 }
 
 .services{
   margin : 100px 0;
   display : flex;
+  flex-direction : row;
   flex-wrap : wrap;
 }
