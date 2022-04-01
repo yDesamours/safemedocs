@@ -12,7 +12,7 @@ function App() {
         <Myheader />   
         <Presentation text="Hello" image={medicaments} />
       </Box>
-      <main</main>
+      <main>
         <Services />
       </main>
     </div>
