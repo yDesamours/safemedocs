@@ -13,4 +13,4 @@ function service(props) {
   );
 }
 
-export default props;
+export default service;
