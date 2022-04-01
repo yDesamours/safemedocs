@@ -5,7 +5,7 @@ function service(props) {
     <article className='service'>
       <Link to={props.to}>
         <figure>
-          <img src={props.image} alt={props.service}
+          <img src={props.image} alt={props.service} />
           <figcaption>{props.caption}</figcaption>
         </figure>
       </Link>
