@@ -3,7 +3,6 @@ import '../styles/App.css';
 import Myheader from './myheader';
 import medicaments from '../medias/medicaments.jpg';
 import Presentation from './presentation';
-import Service from './service';
 
 function App() {
   return (
