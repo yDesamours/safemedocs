@@ -1,0 +1,24 @@
+.presentation{
+  display : flex;
+  justify-content : center;
+  align-items: center;
+}
+
+.presentation_text{
+  width : 35%;
+}
+
+.presentation_text p{
+  font-size : 55px;
+  color : #6772E5;
+}
+
+.presentation_image{
+  width : 55%;
+}
+  
+.presentation_image img{
+  width : 100%;
+  height : auto;
+}
+

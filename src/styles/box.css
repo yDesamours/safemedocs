@@ -1,0 +1,6 @@
+.first_view{
+  height : 100vh;
+  display : flex;
+  flex-direction : row;
+  flex-wrap : wrap;
+}

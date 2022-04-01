@@ -1,0 +1,14 @@
+nav{
+  height : 100%;
+  margin-left : 20px;
+}
+
+nav ul{
+  display : flex;
+  height : 100%;
+}
+
+li{
+  list-style-type : none;
+  height : 100%;
+}
