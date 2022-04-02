@@ -4,6 +4,7 @@ import Myheader from './myheader';
 import medicaments from '../medias/medicaments.jpg';
 import Presentation from './presentation';
 import Acceuil from './acceuil';
+import Prescription from './prescription';
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
       </Box>
       <main>
         <Acceuil />
+        <Prescription />
       </main>
     </div>
   );
