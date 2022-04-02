@@ -1,13 +1,18 @@
 .service{
   width : 250px;
-  height : 300px;
+  height : 350px;
+  display : flex;
+  flex-direction : column;
+  justify-content : space-around;
+  border : none;
 }
 
-.service:hover figure{
-  transform : scale(1.3)
+.service:hover{
+  border : #6772E5 3px solid;
+  border-radius : 8px;
+  box-sizing : border-box;
 }
-
-.service figcaption{
+.service p{
   font-size : 16px;
   color : #6772E5;
   visibility : hidden;
@@ -18,7 +23,7 @@
   height : auto;
 }
 
-.service:hover figcaption{
+.service:hover p{
   visibility : visible;
-  margin-top : 30px; 
+  margin-bottom : 5px; 
 }
