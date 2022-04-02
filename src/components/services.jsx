@@ -1,6 +1,6 @@
 import Service from './service';
 import Box from './box';
-import prescription from '../medias/prescription.jpg';
+import prescription from '../medias/prescription.webp';
 import qr from '../medias/qr.jpg';
 import carte from '../medias/carte.jpg';
 
