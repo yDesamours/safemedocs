@@ -10,9 +10,15 @@
 .service figcaption{
   font-size : 16px;
   color : #6772E5;
+  visibility : hidden;
 }
 
 .service img{
   width : 100%;
   height : auto;
+}
+
+.service:hover figcaption{
+  visibility : visible;
+  margin-top : 30px; 
 }
