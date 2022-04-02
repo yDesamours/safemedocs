@@ -5,9 +5,10 @@ class Prescription extends React.Component{
   constructor(props){
     super(props);
     this.state = {
-      input = '';
-      this.handleInput = this.handleInput.bind(this)
+      input : ''
     }
+    this.handleInput = this.handleInput.bind(this)
+  }
   
   handleInput(e){
     this.setState(
@@ -26,11 +27,11 @@ class Prescription extends React.Component{
   render(){
     return(
       <form>
-        <textarea value={this.state.input} required=true />
-        <button type="submit" onClick={this.send}
+        <textarea value={this.state.input} required={ true } />
+        <button type="submit" onClick={this.send}></button>
       </form>    
     );
   }
 }
 
-default export Prescription;
+export default Prescription;
