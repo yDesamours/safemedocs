@@ -1,9 +1,9 @@
 .service{
   width : 250px;
-  height : 250px;
+  height : 300px;
 }
 
-.service:hover{
+.service:hover figure{
   transform : scale(1.3)
 }
 
