@@ -3,7 +3,7 @@ import '../styles/App.css';
 import Myheader from './myheader';
 import medicaments from '../medias/medicaments.jpg';
 import Presentation from './presentation';
-
+import Accuei from './acceuil';
 
 function App() {
   return (
@@ -13,7 +13,7 @@ function App() {
         <Presentation text="Hello" image={medicaments} />
       </Box>
       <main>
- 
+        <Acceuil />
       </main>
     </div>
   );
