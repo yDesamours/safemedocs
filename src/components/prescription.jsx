@@ -27,7 +27,7 @@ class Prescription extends React.Component{
   render(){
     return(
       <form>
-        <textarea value={this.state.input} required={ true } />
+        <textarea value={this.state.input} onChange={this.handleInput} required={ true } />
         <button type="submit" onClick={this.send}></button>
       </form>    
     );
