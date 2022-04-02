@@ -3,7 +3,7 @@ import '../styles/App.css';
 import Myheader from './myheader';
 import medicaments from '../medias/medicaments.jpg';
 import Presentation from './presentation';
-import Accuei from './acceuil';
+import Acceuil from './acceuil';
 
 function App() {
   return (
