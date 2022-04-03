@@ -43,6 +43,7 @@ class Prescription extends React.Component{
           <p>here to</p>
         </div>
         <form className="prescription_write">
+          <legend>Rx</legend>
           <textarea value={this.state.input} onChange={this.handleInput} required={ true } />
           <button type="submit" onClick={this.send}>Submit</button>
         </form> 
