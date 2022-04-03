@@ -1,6 +1,18 @@
+.prescription_write{
+  width : 40%;
+  height : 90%;
+}
+
+.prescription div{
+  width : 40%;
+  height : 90%;
+}
+
 textarea{
   border : #6772E5 3px solid;
   border-radius : 8px;
   box-sizing : border-box;
   resize : none;
+  width : 100%;
+  max-height : 100%;
 }
