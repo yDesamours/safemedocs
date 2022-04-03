@@ -38,7 +38,10 @@ class Prescription extends React.Component{
   render(){
     return(
       <Box className='prescription'>
-        
+        <div>
+          <p>some text goes here</p>
+          <p>here to</p>
+        </div>
         <form>
           <textarea value={this.state.input} onChange={this.handleInput} required={ true } />
           <button type="submit" onClick={this.send}>Submit</button>
