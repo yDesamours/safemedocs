@@ -1,5 +1,6 @@
 import React from 'react';
 import axios from 'axios';
+import Box from './box';
 
 class Prescription extends React.Component{
   constructor(props){
@@ -22,14 +23,25 @@ class Prescription extends React.Component{
       content : this.state.input
       }
     )
+      .then(response => {
+        console.log(response)
+        this.setState(
+          { input : '' }
+        )
+      })
+      .catch(error => {
+        console.log(error)
+      })
   }
   
   render(){
     return(
-      <form>
-        <textarea value={this.state.input} onChange={this.handleInput} required={ true } />
-        <button type="submit" onClick={this.send}></button>
-      </form>    
+      <Box className='prescription'>
+        <form>
+          <textarea value={this.state.input} onChange={this.handleInput} required={ true } />
+          <button type="submit" onClick={this.send}>Submit</button>
+        </form> 
+      </Box>   
     );
   }
 }
