@@ -1,6 +1,7 @@
 import React from 'react';
 import axios from 'axios';
 import Box from './box';
+import '../styles/prescription.css'
 
 class Prescription extends React.Component{
   constructor(props){
@@ -37,6 +38,7 @@ class Prescription extends React.Component{
   render(){
     return(
       <Box className='prescription'>
+        
         <form>
           <textarea value={this.state.input} onChange={this.handleInput} required={ true } />
           <button type="submit" onClick={this.send}>Submit</button>
