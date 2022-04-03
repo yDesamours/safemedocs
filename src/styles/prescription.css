@@ -3,6 +3,11 @@
   height : 90%;
 }
 
+.prescription_write legend{
+  font-size : 30px;
+  color : #6772E5;
+}
+
 .prescription div{
   width : 40%;
   height : 90%;
@@ -14,5 +19,6 @@ textarea{
   box-sizing : border-box;
   resize : none;
   width : 100%;
-  max-height : 100%;
+  height : 280px;
+  overflow : scroll;
 }
