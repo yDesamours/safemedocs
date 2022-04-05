@@ -1,4 +1,5 @@
 import React from 'react';
+import { QRCodeSVG } from 'qrcode.react';
 import axios from 'axios';
 import Box from './box';
 import '../styles/prescription.css';
@@ -8,7 +9,8 @@ class Prescription extends React.Component{
   constructor(props){
     super(props);
     this.state = {
-      input : ''
+      input : '',
+      response : 'test'
     }
     this.handleInput = this.handleInput.bind(this)
   }
@@ -28,7 +30,7 @@ class Prescription extends React.Component{
       .then(response => {
         console.log(response)
         this.setState(
-          { input : '' }
+          { response  }
         )
       })
       .catch(error => {
@@ -37,20 +39,27 @@ class Prescription extends React.Component{
   }
   
   render(){
+    let write = <Box className='prescription'>
+                  <div className="prescription_text">
+                    <p>some text goes here</p>
+                    <p>here to</p>
+                  </div>
+                  <form className="prescription_write">
+                    <legend>Rx</legend>
+                    <textarea value={this.state.input} onChange={this.handleInput} required={ true } />
+                    <div class='submit'>
+                      <Button to='#' onClick={this.send}><p>Submit</p></Button>
+                    </div>
+                  </form> 
+                </Box>;
+    let qr = <Box className="response">
+                <QRCodeSVG value={ this.state.response } size={256}/>
+              </Box>
     return(
-      <Box className='prescription'>
-        <div className="prescription_text">
-          <p>some text goes here</p>
-          <p>here to</p>
-        </div>
-        <form className="prescription_write">
-          <legend>Rx</legend>
-          <textarea value={this.state.input} onChange={this.handleInput} required={ true } />
-          <div class='submit'>
-            <Button to='#' onClick={this.send}><p>Submit</p></Button>
-          </div>
-        </form> 
-      </Box>   
+      <div>
+        { this.state.response ? qr : write }
+      </div>
+      
     );
   }
 }
