@@ -10,7 +10,7 @@ class Prescription extends React.Component{
     super(props);
     this.state = {
       input : '',
-      response : 'text'
+      response : ''
     }
     this.handleInput = this.handleInput.bind(this)
   }
@@ -18,6 +18,12 @@ class Prescription extends React.Component{
   handleInput(e){
     this.setState(
       { input : e.target.value }
+    )
+  }
+
+  new(){
+    this.setState(
+      { response : '' }
     )
   }
 
