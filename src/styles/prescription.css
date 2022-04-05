@@ -39,3 +39,8 @@ textarea{
     justify-content : space-between;
     align-items : center;
   }
+
+  .new{
+    width : 100px;
+    height : 60px;
+  }
