@@ -5,6 +5,7 @@ import medicaments from '../medias/medicaments.jpg';
 import Presentation from './presentation';
 import Acceuil from './acceuil';
 import Prescription from './prescription';
+import Lecteur from './lecteur';
 import { Routes, Route } from 'react-router-dom';
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
         <Routes>
           <Route index element={ <Acceuil /> } />
           <Route path='/write' element={ <Prescription /> } />
+          <Route path='/read'  element={ <Lecteur /> } />
         </Routes>
       </main>
     </div>
