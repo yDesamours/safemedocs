@@ -26,11 +26,14 @@ textarea{
 }
 
 .prescription .button{
-  height : 30px;
-  width : 100%;
-  background-color : #6772E5;
-  color : #fff;
   text-align : center;
   font-size : 1.2em;
   border : none;
+}
+
+.submit{
+  height : 30px;
+  width : 100%;
+  color : #fff;
+  background-color : #6772E5;
 }
