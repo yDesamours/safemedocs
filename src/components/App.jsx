@@ -5,6 +5,7 @@ import medicaments from '../medias/medicaments.jpg';
 import Presentation from './presentation';
 import Acceuil from './acceuil';
 import Prescription from './prescription';
+import { Routes, Route } from 'react-router-dom';
 
 function App() {
   return (
@@ -14,8 +15,10 @@ function App() {
         <Presentation text="Hello" image={medicaments} />
       </Box>
       <main>
-        <Acceuil />
-        <Prescription />
+        <Routes>
+          <Route index element={ <Acceuil /> } />
+          <Route path='/write' element={ <Prescription /> } />
+        </Routes>
       </main>
     </div>
   );
