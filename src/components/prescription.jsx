@@ -39,7 +39,7 @@ class Prescription extends React.Component{
   render(){
     return(
       <Box className='prescription'>
-        <div>
+        <div className="prescription_text">
           <p>some text goes here</p>
           <p>here to</p>
         </div>
