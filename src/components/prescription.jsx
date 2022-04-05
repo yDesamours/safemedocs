@@ -1,7 +1,8 @@
 import React from 'react';
 import axios from 'axios';
 import Box from './box';
-import '../styles/prescription.css'
+import '../styles/prescription.css';
+import Button from './button'
 
 class Prescription extends React.Component{
   constructor(props){
@@ -19,7 +20,7 @@ class Prescription extends React.Component{
   }
 
   send(e){
-    e.preventDefault();
+    //e.preventDefault();
     axios.post('/new',{
       content : this.state.input
       }
@@ -45,7 +46,9 @@ class Prescription extends React.Component{
         <form className="prescription_write">
           <legend>Rx</legend>
           <textarea value={this.state.input} onChange={this.handleInput} required={ true } />
-          <button type="submit" onClick={this.send}>Submit</button>
+          <div class='submit'>
+            <Button to='#' onClick={this.send}>Submit</Button>
+          </div>
         </form> 
       </Box>   
     );
