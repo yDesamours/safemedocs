@@ -1,4 +1,4 @@
-.button{
+.header nav .button{
   margin : 0 7px ; 
   padding : 0 2px;
   color : #fff;
@@ -7,7 +7,7 @@
   align-items : center;
 }
 
-.button:hover{
+.header nav .button:hover{
   background-color : #fff;
   color : #6772E5;
   transform : scale(1.2)
@@ -21,10 +21,21 @@ a{
 
 a:hover{
   color : inherit;
-  
 }
 
 .prescription .button{
-  text-align : center;
   font-size : 1.2em;
+  margin : 0 7px ; 
+  padding : 0 2px;
+  color : #fff;
+  height : 100%;
+  display : flex;
+  align-items : center;
 }
+
+.prescription .button:hover{
+  color : #6772E5;
+  border : 2px #6772E5 solid;
+  
+}
+
