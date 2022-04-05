@@ -10,9 +10,11 @@ class Prescription extends React.Component{
     super(props);
     this.state = {
       input : '',
-      response : ''
+      response : 'helo'
     }
     this.handleInput = this.handleInput.bind(this)
+    this.send = this.send.bind(this)
+    this.new = this.new.bind(this)
   }
   
   handleInput(e){
@@ -21,14 +23,16 @@ class Prescription extends React.Component{
     )
   }
 
-  new(){
+  new(e){
+    e.preventDefault()
     this.setState(
       { response : '' }
     )
   }
 
   send(e){
-    //e.preventDefault();
+    console.log('sending')
+    e.preventDefault();
     axios.post('/new',{
       content : this.state.input
       }
@@ -41,6 +45,9 @@ class Prescription extends React.Component{
       })
       .catch(error => {
         console.log(error)
+        this.setState(
+        { input : '' }
+    )
       })
   }
   
@@ -54,14 +61,14 @@ class Prescription extends React.Component{
                     <legend>Rx</legend>
                     <textarea value={this.state.input} onChange={this.handleInput} required={ true } />
                     <div className='submit'>
-                      <Button to='#' onClick={this.send}>Submit</Button>
+                      <Button to='#' click={this.send}>Submit</Button>
                     </div>
                   </form> 
                 </Box>;
     let qr = <Box className="response">
                 <QRCodeSVG value={ this.state.response } size={256}/>
                 <div className="new">
-                  <Button to='#' onClick={this.new}>New</Button>
+                  <Button to='#' click={this.new}>New</Button>
                 </div>
               </Box>
     return(

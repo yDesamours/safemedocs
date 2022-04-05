@@ -4,7 +4,7 @@ import '../styles/button.css';
 function button(props){
   return(
     <div className="button">
-      <Link to={props.to}>{props.children}</Link>
+      <Link to={ props.to } onClick={props.click}>{props.children}</Link>
     </div>
   )
 }
