@@ -5,6 +5,7 @@
   flex-direction : column;
   justify-content : space-around;
   border : none;
+  text-align : center;
 }
 
 .service:hover{
