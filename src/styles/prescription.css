@@ -8,7 +8,7 @@
   color : #6772E5;
 }
 
-.prescription div{
+.prescription .prescription_text{
   width : 40%;
   height : 90%;
 }
@@ -23,12 +23,6 @@ textarea{
   overflow : scroll;
   padding : 15px;
   font-size : 16px;
-}
-
-.prescription .button{
-  text-align : center;
-  font-size : 1.2em;
-  border : none;
 }
 
 .submit{
