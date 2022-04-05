@@ -22,7 +22,7 @@ a:hover{
   color : inherit;
 }
 
-.prescription .button{
+.prescription .button, .new .button{
   font-size : 1.2em; 
   padding : 0 2px;
   color : #fff;
@@ -34,7 +34,7 @@ a:hover{
   border-radius : 8px;
 }
 
-.prescription .button:hover{
+.prescription .button:hover, .new .button:hover{
   color : #6772E5;
   border : 3px #6772E5 solid;
   background-color : #fff;  

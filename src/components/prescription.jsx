@@ -54,7 +54,7 @@ class Prescription extends React.Component{
                 </Box>;
     let qr = <Box className="response">
                 <QRCodeSVG value={ this.state.response } size={256}/>
-                <div className='"new"'>
+                <div className="new">
                   <Button to='#' onClick={this.new}>New</Button>
                 </div>
               </Box>
