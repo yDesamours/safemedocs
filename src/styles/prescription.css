@@ -30,3 +30,11 @@ textarea{
   width : 100%;
   color : #fff;
 }
+
+  .response{
+    background-color : #6772E5;
+    padding : 80px;
+    display : flex;
+    justify-content : center;
+    align-items : center;
+  }
