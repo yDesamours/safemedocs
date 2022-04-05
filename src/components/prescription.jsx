@@ -10,7 +10,7 @@ class Prescription extends React.Component{
     super(props);
     this.state = {
       input : '',
-      response : 'test'
+      response : 'text'
     }
     this.handleInput = this.handleInput.bind(this)
   }
@@ -47,14 +47,16 @@ class Prescription extends React.Component{
                   <form className="prescription_write">
                     <legend>Rx</legend>
                     <textarea value={this.state.input} onChange={this.handleInput} required={ true } />
-                    <div class='submit'>
-                      <Button to='#' onClick={this.send}><p>Submit</p></Button>
+                    <div className='submit'>
+                      <Button to='#' onClick={this.send}>Submit</Button>
                     </div>
                   </form> 
                 </Box>;
     let qr = <Box className="response">
                 <QRCodeSVG value={ this.state.response } size={256}/>
-                <Button to='#' onClick={this.new}><p>New</p></Button>
+                <div className='"new"'>
+                  <Button to='#' onClick={this.new}>New</Button>
+                </div>
               </Box>
     return(
       <div>
