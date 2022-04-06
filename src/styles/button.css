@@ -1,13 +1,13 @@
 .button{
   font-size : 1.2em; 
-  padding : 0 25px;
+  padding : 0 15px;
   color : #fff;
   height : 40px;
   display : flex;
   align-items : center;
   border-radius : 8px;
   cursor : pointer;
-  margin : 10px;
+  margin : 10px 0;
   border : none;
 }
 
@@ -20,6 +20,10 @@
 
 .prescription .button{
     background-color : #6772E5;
+}
+
+.prescription .button:hover{
+    background-color : #fff;
 }
 
 .new, .save{
