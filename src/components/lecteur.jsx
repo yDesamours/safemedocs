@@ -39,8 +39,10 @@ class Lecteur extends React.Component{
         <div className="file_input">
           <input type="file" id="file" onChange={this.handleChange} />
           <label htmlFor="file"><p>Choisir un fichier</p></label>
-          <p>{ this.state.file }</p>
-          <Button click = {this.handleFile} disabled= {!this.state.file}>Retreive</Button>
+          <div className="file_select">
+            <Button className="save" click = {this.handleFile} disabled= {!this.state.file}>Lire</Button>
+            <p className='filename'>{ this.state.file || "Aucun fichier choisi!"}</p>
+          </div>
         </div>
         <div id="reader"></div>
       </Box>
