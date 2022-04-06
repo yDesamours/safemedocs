@@ -15,7 +15,7 @@ class Lecteur extends React.Component{
   }
   
   handleChange(e){
-    if(e.target.files.length != 0 ) 
+    if(e.target.files.length !== 0 ) 
       this.setState( {file : e.target.files[0].name} )
   }
 
@@ -39,7 +39,7 @@ class Lecteur extends React.Component{
           <input type="file" id="file" onChange={this.handleChange} />
           <label htmlFor="file"><p>Choisir un fichier</p></label>
           <p>{ this.state.file }</p>
-          <button onClick = {this.handleFile} disabled= {!this.state.file}>Retreive</button>
+          <Button click = {this.handleFile} disabled= {this.state.file}>Retreive</Button>
         </div>
         <div id="reader"></div>
       </Box>
