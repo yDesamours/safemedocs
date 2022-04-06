@@ -3,15 +3,14 @@ import Box from './box';
 import Button from './button';
 
 class Lecteur extends React.Component{
-  render(
+  render(){
     return(
       <Box className="lecteur">
-        <div className="fichier">
-          <input type="file">
-        </div>
+        <input type="file" id="file"/>
+        <label for="file">Choisir un fichier</label>
       </Box>
-    )
-  )
+    );
+  }
 } 
 
 export default Lecteur;
