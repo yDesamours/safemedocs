@@ -1,7 +1,7 @@
 import React from 'react';
 import { QRCodeSVG } from 'qrcode.react';
 import * as saveSvgAsPng  from 'save-svg-as-png';
-import axios from 'axios';
+//import axios from 'axios';
 import Box from './box';
 import '../styles/prescription.css';
 import Button from './button'
@@ -73,8 +73,8 @@ class Prescription extends React.Component{
                 </Box>;
     let qr = <Box className="response">
                 <QRCodeSVG  id="svg" value={ this.state.response } size={256}/>
-                  <Button className='new' click={this.new}>New</Button>
-                  <Button className click={this.save}>Save</Button>
+                <Button className='save' click={this.save}>Telecharger</Button>
+                <Button className='new' click={this.new}>Nouveau</Button>
               </Box>
     return(
       <div>

@@ -1,19 +1,27 @@
-.prescription .button, .new .button{
+.button{
   font-size : 1.2em; 
   padding : 0 25px;
   color : #fff;
   height : 40px;
   display : flex;
   align-items : center;
-  background-color : #6772E5;
   border-radius : 8px;
   cursor : pointer;
+  margin : 10px;
+  border : none;
 }
 
-.prescription .button:hover, .new .button:hover{
+.button:hover{
   color : #6772E5;
   border : 3px #6772E5 solid;
   background-color : #fff;  
   box-sizing : border-box;
 }
 
+.prescription .button{
+    background-color : #6772E5;
+}
+
+.new, .save{
+    background-color : #059862;
+}
