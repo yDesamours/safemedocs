@@ -18,7 +18,7 @@
   box-sizing : border-box;
 }
 
-.prescription .button{
+.send{
     background-color : #6772E5;
 }
 
@@ -29,3 +29,11 @@
 .new, .save{
     background-color : #059862;
 }
+
+  .danger{
+    background-color : #EE0202;
+  }
+
+  .button[disabled]{
+  cursor : not-allowed;
+  }

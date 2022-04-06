@@ -68,7 +68,8 @@ class Prescription extends React.Component{
                   <form className="prescription_write">
                     <legend>Rx</legend>
                     <textarea value={this.state.input} onChange={this.handleInput} required={ true } />
-                      <Button click={this.send} disabled={false}>Submit</Button>
+                    <Button className="danger" disabled={this.state.input} click={this.new}>Effacer</Button> 
+                    <Button className="send" click={this.send} disabled={false}>Submit</Button> 
                   </form> 
                 </Box>;
     let qr = <Box className="response">
