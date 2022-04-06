@@ -1,5 +1,6 @@
 import React from 'react';
 import { QRCodeSVG } from 'qrcode.react';
+import * as saveSvgAsPng  from 'save-svg-as-png';
 import axios from 'axios';
 import Box from './box';
 import '../styles/prescription.css';
@@ -12,9 +13,11 @@ class Prescription extends React.Component{
       input : '',
       response : 'helo'
     }
+    
     this.handleInput = this.handleInput.bind(this)
     this.send = this.send.bind(this)
     this.new = this.new.bind(this)
+    this.save = this.save.bind(this)
   }
   
   handleInput(e){
@@ -28,6 +31,11 @@ class Prescription extends React.Component{
     this.setState(
       { response : '' }
     )
+  }
+
+  save(e){
+    e.preventDefault()
+      saveSvgAsPng.saveSvg(document.getElementById("svg"), "test.svg", {scale : 10})
   }
 
   send(e){
@@ -66,9 +74,12 @@ class Prescription extends React.Component{
                   </form> 
                 </Box>;
     let qr = <Box className="response">
-                <QRCodeSVG value={ this.state.response } size={256}/>
+                <QRCodeSVG  id="svg" value={ this.state.response } size={256}/>
                 <div className="new">
                   <Button to='#' click={this.new}>New</Button>
+                </div>
+                <div className="new">
+                  <Button to='#' click={this.save}>Save</Button>
                 </div>
               </Box>
     return(
