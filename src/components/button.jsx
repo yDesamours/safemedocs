@@ -1,9 +1,9 @@
+import '../styles/button.css'
+
 function button(props){
   let className = `button ${props.className}`
   return(
-    <div className={className}>
-      <button disabled={ !props.disabled }>{ props.children } </button>
-    </div>
+      <button className={className} button disabled={ !props.disabled }>{ props.children } </button>
   )
 }
 
