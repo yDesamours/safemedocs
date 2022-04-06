@@ -1,11 +1,11 @@
-import Button from './button';
+import NavButton from './navbutton';
 import '../styles/nav.css'
 
 function nav(props){
   return(
     <nav>
       <ul>
-        <li><Button to='/a_propos'>A Propos</Button></li>
+        <li><NavButton to='/a_propos'>A Propos</NavButton></li>
       </ul>
    </nav>    
   )

@@ -1,10 +1,8 @@
-import { Link } from 'react-router-dom';
-import '../styles/button.css';
-
 function button(props){
+  let className = `button ${props.className}`
   return(
-    <div className="button">
-      <Link to={ props.to } onClick={props.click}>{props.children}</Link>
+    <div className={className}>
+      <button disabled={ !props.disabled }>{ props.children } </button>
     </div>
   )
 }
