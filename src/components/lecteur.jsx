@@ -2,6 +2,7 @@ import React from 'react';
 import Box from './box';
 import '../styles/lecteur.css';
 import Button from './button';
+import { Html5Qrcode } from 'html5-qrcode'
 
 class Lecteur extends React.Component{
   constructor(props){
@@ -11,6 +12,7 @@ class Lecteur extends React.Component{
     }
   }
   render(){
+    let qr = new Html5Qrcode()
     return(
       <Box className="lecteur">
         <div className="file_input">
