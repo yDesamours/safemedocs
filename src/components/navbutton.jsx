@@ -1,9 +1,9 @@
 import { Link } from 'react-router-dom';
-import '../styles/button.css';
+import '../styles/navbutton.css';
 
 function navButton(props){
   return(
-    <div className="button">
+    <div className="navbutton">
       <Link to={ props.to } onClick={props.click}>{props.children}</Link>
     </div>
   )
