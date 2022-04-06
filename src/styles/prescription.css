@@ -31,15 +31,6 @@ textarea{
   color : #fff;
 }
 
-  .response{
-    background-color : #6772E5;
-    padding : 80px;
-    display : flex;
-    flex-direction : column;
-    justify-content : space-between;
-    align-items : center;
-  }
-
   .new{
     width : 100px;
     height : 40px;

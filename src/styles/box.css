@@ -22,3 +22,21 @@
   padding : 50px;
   height : 400px;
 }
+
+.response{
+    background-color : #6772E5;
+    padding : 80px;
+    display : flex;
+    flex-direction : column;
+    justify-content : space-between;
+    align-items : center;
+  }
+
+.lecteur{
+  display : flex;
+  flex-flow : column wrap;
+  justify-content : space-evenly;
+  align-items : center;
+  height : 400px;
+  background-color : #6772E5;
+}
