@@ -37,4 +37,15 @@
     margin-left : 2px;
   }
 
+  video{
+    width : 250px;
+    border : 2px #fff solid;
+  }
+
+.buttons{
+  display : flex;
+  width : 250px;
+  justify-content : space-evenly;
+}
+
   

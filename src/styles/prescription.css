@@ -35,3 +35,8 @@ textarea{
     width : 100px;
     height : 40px;
   }
+
+  .qrbox{
+    background-color : #fff;
+    padding : 15px;
+  }

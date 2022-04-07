@@ -5,6 +5,7 @@ import * as saveSvgAsPng  from 'save-svg-as-png';
 import Box from './box';
 import '../styles/prescription.css';
 import Button from './button'
+import favicon from '../medias/favicon-32x32.png'
 
 class Prescription extends React.Component{
   constructor(props){
@@ -72,12 +73,31 @@ class Prescription extends React.Component{
                     <Button className="send" click={this.send} disabled={false}>Submit</Button> 
                   </form> 
                 </Box>;
-    let qr = <Box className="response">
-                <QRCodeSVG  id="svg" value={ this.state.response } size={256}/>
-                <Button className='save' click={this.save} disabled={false}>Telecharger</Button>
-                <Button className='new' click={this.new} disabled={false}>Nouveau</Button>
-              </Box>
-    return(
+    let qr = (
+        <Box className="response">
+          <div className="qrbox">
+            <QRCodeSVG  
+                id="svg" 
+                fgColor={"#6772E5"}
+                value={ this.state.response } 
+                size={256}
+                imageSettings={
+                  {
+                    src: { favicon },
+                    x: null,
+                    y: null,
+                    height: 24,
+                    width: 24,
+                    excavate: true,
+                  }
+                }
+              />
+          </div>
+          <Button className='save' click={this.save} disabled={false}>Telecharger</Button>
+          <Button className='new' click={this.new} disabled={false}>Nouveau</Button>
+        </Box> 
+    )
+      return(
       <div>
         { this.state.response ? qr : write }
       </div>

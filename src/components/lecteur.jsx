@@ -2,8 +2,8 @@ import React from 'react';
 import Box from './box';
 import '../styles/lecteur.css';
 import Button from './button';
-import { Html5Qrcode } from 'html5-qrcode'
-import '../styles/button.css'
+import QrScanner from 'qr-scanner';
+import '../styles/button.css';
 
 class Lecteur extends React.Component{
   constructor(props){
@@ -11,8 +11,25 @@ class Lecteur extends React.Component{
     this.state = {
       file : '',
     }
+   this.scanner = null;
+    
     this.handleFile = this.handleFile.bind(this)
     this.handleChange = this.handleChange.bind(this)
+    this.start = this.start.bind(this)
+    this.stop = this.stop.bind(this)
+  }
+
+  componentDidMount(){
+    const video = document.getElementById('scanner')
+    this.scanner = new QrScanner(video, result => console.log(result))
+  }
+
+  start(){
+    this.scanner.start()
+  }
+
+  stop(){
+    this.scanner.stop()
   }
   
   handleChange(e){
@@ -21,21 +38,24 @@ class Lecteur extends React.Component{
   }
 
   handleFile(){
-    let qr = new Html5Qrcode("reader")
     let file = document.getElementById('file').files[0]
 
-    qr.scanFile(file, false)
-    .then(decodedText => {
-      console.log(decodedText);
-    })
-    .catch(err => {
-      console.log(`Error scanning file. Reason: ${err}`)
-    });
+    QrScanner.scanImage(file)
+    .then(result => console.log(result))
+    .catch(error => console.log(error || 'No QR code found.'));
   }
   
   render(){
     return(
       <Box className="lecteur">
+        <div>
+          <video id="scanner"></video>
+          <div className = 'buttons'>
+            <Button className='save' click={this.start}>Start</Button>
+            <Button className="danger" click={this.stop}>Stop</Button>
+          </div>
+        </div>
+                
         <div className="file_input">
           <input type="file" id="file" onChange={this.handleChange} />
           <label htmlFor="file"><p>Choisir un fichier</p></label>
@@ -44,7 +64,6 @@ class Lecteur extends React.Component{
             <p className='filename'>{ this.state.file || "Aucun fichier choisi!"}</p>
           </div>
         </div>
-        <div id="reader"></div>
       </Box>
     );
   }
