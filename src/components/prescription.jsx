@@ -40,7 +40,9 @@ class Prescription extends React.Component{
   }
 
   save(){
-      saveSvgAsPng.saveSvg(document.getElementById("svg"), "test.svg", {scale : 10})
+    const date = new Date();
+    const name = date.toLocaleDateString() +'-'+ date.toLocaleTimeString()
+      saveSvgAsPng.saveSvg(document.getElementById("svg"), name , {scale : 10})
   }
 
   send(){

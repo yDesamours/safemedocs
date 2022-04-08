@@ -9,7 +9,7 @@ function service(props) {
           <img src={props.image} alt={props.service} />
         </figure>
       </Link>
-      <p>{props.caption}</p>
+      <p><b>{props.caption}</b></p>
     </article>
   );
 }
