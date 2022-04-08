@@ -58,7 +58,7 @@ class Lecteur extends React.Component{
         </div>
                 
         <div className="file_input">
-          <input type="file" id="file" onChange={this.handleChange} />
+          <input type="file" id="file" name='file' onChange={this.handleChange} accept="image/*" />
           <label htmlFor="file"><p>Choisir un fichier</p></label>
           <div className="file_select">
             <Button className="save" click = {this.handleFile} disabled= {!this.state.file}>Lire</Button>
