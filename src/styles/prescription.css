@@ -11,6 +11,9 @@
 .prescription .prescription_text{
   width : 40%;
   height : 90%;
+  display : flex;
+  flex-direction : column;
+  justify-content : center;
 }
 
 textarea{
@@ -40,3 +43,18 @@ textarea{
     background-color : #fff;
     padding : 15px;
   }
+
+.prescription_text p{
+  font-family : 'Actor';
+}
+  
+.prescription_text p:nth-child(1){
+  font-size : 30px;
+  color : #fff;
+  background-color : #6772E5;
+}
+
+.prescription_text p:nth-child(2){
+  font-size : 23px;
+  color : #6772E5;
+}

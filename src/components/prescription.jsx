@@ -63,8 +63,8 @@ class Prescription extends React.Component{
   render(){
     let write = <Box className='prescription'>
                   <div className="prescription_text">
-                    <p>some text goes here</p>
-                    <p>here to</p>
+                    <p>Ecrire une prescription.</p>
+                    <p>Puis encoder le.</p>
                   </div>
                   <form className="prescription_write">
                     <legend>Rx</legend>
