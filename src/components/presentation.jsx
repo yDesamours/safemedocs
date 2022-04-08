@@ -8,7 +8,7 @@ const Presentation = (props)=> {
   
   return(
     <div className="presentation">
-      <div className="presentation_text"><p>{props.text}</p></div>
+      <div className="presentation_text">{props.text}</div>
       <figure className="presentation_image" style={style}>
         <img src={props.image} alt="illustration" />
       </figure>

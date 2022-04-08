@@ -1,8 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Mitr:wght@300&display=swap');
+
 .presentation{
   display : flex;
   justify-content : center;
   align-items: center;
   margin-bottom : 100px;
+  font-family : 'Mitr';
 }
 
 .presentation_text{
