@@ -6,6 +6,8 @@
   justify-content : space-around;
   border : none;
   text-align : center;
+  font-family : 'Actor';
+  font-size : '18px'
 }
 
 .service:hover{

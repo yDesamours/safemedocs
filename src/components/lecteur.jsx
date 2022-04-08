@@ -69,8 +69,8 @@ class Lecteur extends React.Component{
     )
 
     const result = (
-      <Box className ='resultat'>
-        <p>{this.state.result}</p>
+      <Box className ='lecteur'>
+        <p className='resultat'>{this.state.result}</p>
       </Box>
     )
     
