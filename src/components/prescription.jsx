@@ -35,7 +35,7 @@ class Prescription extends React.Component{
   
   new(){
     this.setState(
-      { response : '' }
+      { response : ''  }
     )
   }
 
@@ -90,7 +90,6 @@ class Prescription extends React.Component{
                 fgColor={"#6772E5"}
                 value={ this.state.response } 
                 size={256}
-                }
               />
           </div>
           <Button className='save' click={this.save} disabled={false}>Telecharger</Button>
