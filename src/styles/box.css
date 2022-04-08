@@ -1,5 +1,5 @@
 .first_view{
-  height : 100vh;
+  min-height : 100vh;
   display : flex;
   flex-direction : column;  
   justify-content : space-between;
@@ -39,4 +39,5 @@
   align-items : center;
   height : 400px;
   background-color : #6772E5;
+  width : 100%;
 }
