@@ -13,7 +13,7 @@ function App() {
     <div className="App">
       <Box className="first_view">
         <Myheader />   
-        <Presentation text="Hello" image={medicaments} />
+        <Presentation text="Procurez vous des médicaments sûrs." image={medicaments} />
       </Box>
       <main>
         <Routes>
