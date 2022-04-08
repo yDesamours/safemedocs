@@ -12,7 +12,7 @@ class Prescription extends React.Component{
     super(props);
     this.state = {
       input : '',
-      response : 'hello'
+      response : ''
     }
     
     this.handleInput = this.handleInput.bind(this)
