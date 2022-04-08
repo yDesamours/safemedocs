@@ -5,7 +5,6 @@ import * as saveSvgAsPng  from 'save-svg-as-png';
 import Box from './box';
 import '../styles/prescription.css';
 import Button from './button'
-import favicon from '../medias/favicon-32x32.png'
 
 class Prescription extends React.Component{
   constructor(props){
@@ -19,6 +18,7 @@ class Prescription extends React.Component{
     this.send = this.send.bind(this)
     this.new = this.new.bind(this)
     this.save = this.save.bind(this)
+    this.effacer = this.effacer.bind(this)
   }
   
   handleInput(e){
@@ -27,6 +27,12 @@ class Prescription extends React.Component{
     )
   }
 
+  effacer(){
+    this.setState(
+      { input : '' }
+    )
+  }
+  
   new(){
     this.setState(
       { response : '' }
@@ -34,9 +40,7 @@ class Prescription extends React.Component{
   }
 
   save(){
-    const qr=document.getElementById("svg")
-    console.log(qr)
-      saveSvgAsPng.saveSvg(qr, "test.svg", {scale : 10})
+      saveSvgAsPng.saveSvg(document.getElementById("svg"), "test.svg", {scale : 10})
   }
 
   send(){
@@ -68,12 +72,15 @@ class Prescription extends React.Component{
                     <p>Ecrivez une prescription.</p>
                     <p>Puis encodez la.</p>
                   </div>
-                  <form className="prescription_write">
-                    <legend>Rx</legend>
-                    <textarea value={this.state.input} onChange={this.handleInput} required={ true } />
-                    <Button className="danger" disabled={!this.state.input} click={this.new}>Effacer</Button> 
-                    <Button className="send" click={this.send} disabled={false}>Effectuer</Button> 
-                  </form> 
+                  <div>
+                    <form className="prescription_write">
+                      <legend>Rx</legend>
+                      <textarea value={this.state.input} onChange={this.handleInput} required={ true } />
+                    </form>
+                    <Button className="danger" disabled={!this.state.input} click={this.effacer}>Effacer</Button> 
+                      <Button className="send" click={this.send} disabled={false}>Effectuer</Button> 
+                  </div>
+                   
                 </Box>;
     let qr = (
         <Box className="response">

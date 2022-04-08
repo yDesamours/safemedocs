@@ -1,5 +1,5 @@
 .prescription_write{
-  width : 40%;
+  width : 100%;
   height : 90%;
 }
 
@@ -58,4 +58,9 @@ textarea{
 .prescription_text p:nth-child(2){
   font-size : 23px;
   color : #6772E5;
+}
+
+.prescription div:nth-child(2){
+  flex-grow : 1;
+  margin-left : 50px;
 }
