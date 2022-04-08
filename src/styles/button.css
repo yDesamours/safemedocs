@@ -9,6 +9,7 @@
   cursor : pointer;
   margin : 10px 0;
   border : none;
+  font-family : 'Varela';
 }
 
 .button:hover:not([disabled]){

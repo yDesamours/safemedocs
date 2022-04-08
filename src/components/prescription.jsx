@@ -34,7 +34,9 @@ class Prescription extends React.Component{
   }
 
   save(){
-      saveSvgAsPng.saveSvg(document.getElementById("svg"), "test.svg", {scale : 10})
+    const qr=document.getElementById("svg")
+    console.log(qr)
+      saveSvgAsPng.saveSvg(qr, "test.svg", {scale : 10})
   }
 
   send(){
@@ -63,14 +65,14 @@ class Prescription extends React.Component{
   render(){
     let write = <Box className='prescription'>
                   <div className="prescription_text">
-                    <p>Ecrire une prescription.</p>
-                    <p>Puis encoder le.</p>
+                    <p>Ecrivez une prescription.</p>
+                    <p>Puis encodez la.</p>
                   </div>
                   <form className="prescription_write">
                     <legend>Rx</legend>
                     <textarea value={this.state.input} onChange={this.handleInput} required={ true } />
-                    <Button className="danger" disabled={this.state.input} click={this.new}>Effacer</Button> 
-                    <Button className="send" click={this.send} disabled={false}>Submit</Button> 
+                    <Button className="danger" disabled={!this.state.input} click={this.new}>Effacer</Button> 
+                    <Button className="send" click={this.send} disabled={false}>Effectuer</Button> 
                   </form> 
                 </Box>;
     let qr = (
@@ -81,15 +83,6 @@ class Prescription extends React.Component{
                 fgColor={"#6772E5"}
                 value={ this.state.response } 
                 size={256}
-                imageSettings={
-                  {
-                    src: { favicon },
-                    x: null,
-                    y: null,
-                    height: 24,
-                    width: 24,
-                    excavate: true,
-                  }
                 }
               />
           </div>
