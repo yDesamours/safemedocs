@@ -9,11 +9,12 @@ import Lecteur from './lecteur';
 import { Routes, Route } from 'react-router-dom';
 
 function App() {
+  const texte = <p><b>Procurez</b> vous des médicaments <b>sûrs</b>.</p>
   return (
     <div className="App">
       <Box className="first_view">
         <Myheader />   
-        <Presentation text="Procurez vous des médicaments sûrs." image={medicaments} />
+        <Presentation text={texte} image={medicaments} />
       </Box>
       <main>
         <Routes>
