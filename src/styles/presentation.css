@@ -17,6 +17,11 @@
   color : #6772E5;
 }
 
+.presentation_text p b{
+  color : #fff;
+  background-color : #6772E5;
+}
+
 .presentation_image{
   width : 55%;
 }
