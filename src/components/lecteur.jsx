@@ -10,6 +10,7 @@ class Lecteur extends React.Component{
     super(props)
     this.state = {
       file : '',
+      result : ''
     }
    this.scanner = null;
     
@@ -41,12 +42,12 @@ class Lecteur extends React.Component{
     let file = document.getElementById('file').files[0]
 
     QrScanner.scanImage(file)
-    .then(result => console.log(result))
+    .then(result => this.setState({result : result}))
     .catch(error => console.log(error || 'No QR code found.'));
   }
   
   render(){
-    return(
+    const scanner = (
       <Box className="lecteur">
         <div>
           <video id="scanner"></video>
@@ -65,6 +66,18 @@ class Lecteur extends React.Component{
           </div>
         </div>
       </Box>
+    )
+
+    const result = (
+      <Box className ='resultat'>
+        <p>{this.state.result}</p>
+      </Box>
+    )
+    
+    return(
+      <div>
+        { this.state.result ? result : scanner }
+      </div>  
     );
   }
 } 
