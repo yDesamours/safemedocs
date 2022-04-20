@@ -54,7 +54,7 @@ class Prescription extends React.Component{
       .then(response => {
         console.log(response)
         this.setState(
-          { response  }
+          { response : response.data }
         )
       })
       .catch(error => {
