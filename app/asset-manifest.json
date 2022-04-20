@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/static/css/main.abf7b549.css",
+    "main.js": "/static/js/main.39487590.js",
+    "static/js/684.10e2b2df.chunk.js": "/static/js/684.10e2b2df.chunk.js",
+    "static/js/787.9a3c00ec.chunk.js": "/static/js/787.9a3c00ec.chunk.js",
+    "static/media/medicaments.jpg": "/static/media/medicaments.bf549b13365a7e7b7554.jpg",
+    "static/media/qr.jpg": "/static/media/qr.1359491d650b6ff5bf1b.jpg",
+    "static/media/logo.png": "/static/media/logo.610fc8269cb3b3f26577.png",
+    "static/media/prescription.webp": "/static/media/prescription.7da581675eebdb9861f6.webp",
+    "static/media/carte.jpg": "/static/media/carte.521e9b6c0ba517a39485.jpg",
+    "index.html": "/index.html",
+    "main.abf7b549.css.map": "/static/css/main.abf7b549.css.map",
+    "main.39487590.js.map": "/static/js/main.39487590.js.map",
+    "684.10e2b2df.chunk.js.map": "/static/js/684.10e2b2df.chunk.js.map",
+    "787.9a3c00ec.chunk.js.map": "/static/js/787.9a3c00ec.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.abf7b549.css",
+    "static/js/main.39487590.js"
+  ]
+}

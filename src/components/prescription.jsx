@@ -1,7 +1,7 @@
 import React from 'react';
 import { QRCodeSVG } from 'qrcode.react';
 import * as saveSvgAsPng  from 'save-svg-as-png';
-//import axios from 'axios';
+import axios from 'axios';
 import Box from './box';
 import '../styles/prescription.css';
 import Button from './button'
@@ -47,8 +47,7 @@ class Prescription extends React.Component{
 
   send(){
     console.log('sending')
-    this.setState(state => {return { response : state.input }})
-   /* axios.post('/new',{
+    axios.post('https://safemocscom.yveltdesamours.repl.co/new',{
       content : this.state.input
       }
     )
@@ -63,9 +62,7 @@ class Prescription extends React.Component{
         this.setState(
         { input : '' }
     )
-      })*/
-    this.setState(
-        { input : '' })
+      })
   }
   
   render(){
