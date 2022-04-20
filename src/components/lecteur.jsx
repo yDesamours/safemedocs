@@ -4,6 +4,7 @@ import '../styles/lecteur.css';
 import Button from './button';
 import QrScanner from 'qr-scanner';
 import '../styles/button.css';
+import axios from 'axios';
 
 class Lecteur extends React.Component{
   constructor(props){
@@ -12,7 +13,7 @@ class Lecteur extends React.Component{
       file : '',
       result : ''
     }
-   this.scanner = null;
+    this.scanner = null;
     
     this.handleFile = this.handleFile.bind(this)
     this.handleChange = this.handleChange.bind(this)
@@ -22,7 +23,7 @@ class Lecteur extends React.Component{
 
   componentDidMount(){
     const video = document.getElementById('scanner')
-    this.scanner = new QrScanner(video, result => console.log(result))
+    this.scanner = new QrScanner(video, result => this.handleScan(result))
   }
 
   start(){
@@ -42,8 +43,19 @@ class Lecteur extends React.Component{
     let file = document.getElementById('file').files[0]
 
     QrScanner.scanImage(file)
-    .then(result => this.setState({result : result}))
+    .then(result => this.handleScan(result))
     .catch(error => console.log(error || 'No QR code found.'));
+  }
+
+  handleScan(data){
+  axios.post('https://safemocscom.yveltdesamours.repl.co/read', 
+               {
+                 id : data
+               }
+          ).then(response => {
+    console.log(response)
+              this.setState({ result : response.data.content })
+          })
   }
   
   render(){
