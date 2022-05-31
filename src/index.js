@@ -1,13 +1,26 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { BrowserRouter } from 'react-router-dom'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import './index.css';
 import App from './components/App';
+import Acceuil from './components/acceuil';
+import Prescription from './components/prescription';
+import Lecteur from './components/lecteur';
 import reportWebVitals from './reportWebVitals';
+
+const routes = (
+  <Routes>
+    <Route path='/' element={<App />}>
+      <Route index element={<Acceuil />} />
+      <Route path='/write' element={ <Prescription /> } />
+      <Route path='/read'  element={ <Lecteur /> } />
+    </Route>
+  </Routes>
+)
 
 ReactDOM.render(
   <BrowserRouter>
-    <App />
+    {routes}
   </BrowserRouter>,
   document.getElementById('root')
 );
