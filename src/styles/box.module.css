@@ -1,5 +1,4 @@
-
-first_view{
+firstview{
   min-height : 100vh;
   display : flex;
   flex-direction : column;  
@@ -42,4 +41,11 @@ first_view{
   height : 400px;
   background-color : #6772E5;
   width : 100%;
+}
+
+@media screen and (max-width : 800px){
+.services{
+  display : flex;
+  flex-direction : column;
+  }
 }

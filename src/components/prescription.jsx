@@ -3,8 +3,11 @@ import { QRCodeSVG } from 'qrcode.react';
 import * as saveSvgAsPng  from 'save-svg-as-png';
 import axios from 'axios';
 import Box from './box';
-import '../styles/prescription.css';
+import boxStyles from '../styles/box.module.css'
+import styles from '../styles/prescription.module.css';
 import Button from './button'
+import buttonStyles from '../styles/button.module.css'
+import { CSSTransition } from 'react-transition-group'
 
 class Prescription extends React.Component{
   constructor(props){
@@ -66,24 +69,32 @@ class Prescription extends React.Component{
   }
   
   render(){
-    let write = <Box className='prescription'>
-                  <div className="prescription_text">
+ 
+  
+
+      return(
+      <div>
+        <CSSTransition in={this.state.response === ''} timeout={500}>
+  <Box className={boxStyles.prescription}>
+                  <div className={styles.prescription_text}>
                     <p>Ecrivez une prescription.</p>
                     <p>Puis encodez la.</p>
                   </div>
                   <div>
-                    <form className="prescription_write">
+                    <form className={styles.prescription_write}>
                       <legend>Rx</legend>
-                      <textarea value={this.state.input} onChange={this.handleInput} required={ true } />
+                      <textarea className={styles.textarea} value={this.state.input} onChange={this.handleInput} required={ true } />
                     </form>
-                    <Button className="danger" disabled={!this.state.input} click={this.effacer}>Effacer</Button> 
-                      <Button className="send" click={this.send} disabled={false}>Effectuer</Button> 
+                    <Button className={buttonStyles.danger+ ' ' + buttonStyles.button} disabled={!this.state.input} click={this.effacer}>Effacer</Button> 
+                      <Button className={buttonStyles.send+ ' ' + buttonStyles.button}  click={this.send} disabled={false}>Effectuer</Button> 
                   </div>
                    
                 </Box>;
-    let qr = (
-        <Box className="response">
-          <div className="qrbox">
+  </CSSTransition>
+    
+    <CSSTransition in={this.state.response !== ''} timeout={500}>
+      <Box className={boxStyles.response}>
+          <div className={styles.qrbox}>
             <QRCodeSVG  
                 id="svg" 
                 fgColor={"#6772E5"}
@@ -91,13 +102,10 @@ class Prescription extends React.Component{
                 size={256}
               />
           </div>
-          <Button className='save' click={this.save} disabled={false}>Telecharger</Button>
-          <Button className='new' click={this.new} disabled={false}>Nouveau</Button>
+          <Button className={buttonStyles.save+ ' ' + buttonStyles.button}  click={this.save} disabled={false}>Telecharger</Button>
+          <Button className={buttonStyles.new+ ' ' + buttonStyles.button}  click={this.new} disabled={false}>Nouveau</Button>
         </Box> 
-    )
-      return(
-      <div>
-        { this.state.response ? qr : write }
+    </CSSTransition>
       </div>
       
     );

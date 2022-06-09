@@ -1,15 +1,10 @@
-import { useMediaQuery } from 'react-responsive';
-import '../styles/presentation.css';
-import React from 'react';
+import styles from '../styles/presentation.module.css';
 
 const Presentation = (props)=> {
-  const isMobile = useMediaQuery({ query : '(max-width : 600px)'})
-  const style ={ visibility : isMobile ? 'hidden' : 'visible'};
-  
   return(
-    <div className="presentation">
-      <div className="presentation_text">{props.text}</div>
-      <figure className="presentation_image" style={style}>
+    <div className={styles.presentation}>
+      <div className={styles.presentation_text}>{props.text}</div>
+      <figure className={styles.presentation_image}>
         <img src={props.image} alt="illustration" />
       </figure>
     </div>

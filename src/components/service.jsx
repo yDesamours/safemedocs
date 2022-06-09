@@ -1,9 +1,9 @@
 import { Link } from 'react-router-dom';
-import '../styles/service.css'
+import styles from '../styles/service.module.css'
 
 function service(props) {
   return(
-    <article className='service'>
+    <article className={styles.service}>
       <Link to={props.to}>
         <figure>
           <img src={props.image} alt={props.service} />

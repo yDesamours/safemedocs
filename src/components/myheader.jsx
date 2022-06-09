@@ -1,10 +1,10 @@
 import Logo from './logo';
 import Nav from './nav';
-import '../styles/myheader.css'
+import styles from '../styles/myheader.module.css'
 
 function myheader(props){
   return(
-    <header className="header">
+    <header className={styles.header}>
       <Logo />
       <Nav />
     </header>

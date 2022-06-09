@@ -1,14 +1,14 @@
-nav{
+.nav{
   height : 100%;
   margin-left : 20px;
 }
 
-nav ul{
+.nav ul{
   display : flex;
   height : 100%;
 }
 
-li{
+.li{
   list-style-type : none;
   height : 100%;
 }

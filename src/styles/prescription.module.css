@@ -16,7 +16,7 @@
   justify-content : center;
 }
 
-textarea{
+.textarea{
   border : #6772E5 3px solid;
   border-radius : 8px;
   box-sizing : border-box;

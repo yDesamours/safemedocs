@@ -1,4 +1,3 @@
-import '../styles/button.css'
 
 function button(props){
   let className = `button ${props.className}`

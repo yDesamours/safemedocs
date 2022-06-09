@@ -1,10 +1,12 @@
 import React from 'react';
 import Box from './box';
-import '../styles/lecteur.css';
+import styles from '../styles/lecteur.module.css';
+import boxStyles from '../styles/box.module.css'
 import Button from './button';
 import QrScanner from 'qr-scanner';
-import '../styles/button.css';
+import buttonStyles from '../styles/button.module.css';
 import axios from 'axios';
+import { CSSTransition } from 'react-transition-group'
 
 class Lecteur extends React.Component{
   constructor(props){
@@ -59,37 +61,37 @@ class Lecteur extends React.Component{
   }
   
   render(){
-    const scanner = (
-      <Box className="lecteur">
+    
+    
+    return(
+      <>
+        <CSSTransition in={this.state.result == ''} timeout={500}>
+      <Box className={boxStyles.lecteur}>
         <div>
-          <video id="scanner"></video>
-          <div className = 'buttons'>
-            <Button className='save' click={this.start}>Start</Button>
-            <Button className="danger" click={this.stop}>Stop</Button>
+          <video className={styles.video} id="scanner"></video>
+          <div className = {styles.buttons}>
+            <Button className={buttonStyles.save + ' ' + buttonStyles.button} click={this.start}>Start</Button>
+            <Button className={buttonStyles.danger+ ' ' + buttonStyles.button} click={this.stop}>Stop</Button>
           </div>
         </div>
                 
-        <div className="file_input">
-          <input type="file" id="file" name='file' onChange={this.handleChange} accept="image/*" />
+        <div className={styles.file_input}>
+          <input className={styles.file} type="file" id="file" name='file' onChange={this.handleChange} accept="image/*" />
           <label htmlFor="file"><p>Choisir un fichier</p></label>
-          <div className="file_select">
-            <Button className="save" click = {this.handleFile} disabled= {!this.state.file}>Lire</Button>
-            <p className='filename'>{ this.state.file || "Aucun fichier choisi!"}</p>
+          <div className={styles.file_select}>
+            <Button className={buttonStyles.save+ ' ' + buttonStyles.button} click = {this.handleFile} disabled= {!this.state.file}>Lire</Button>
+            <p className={styles.filename}>{ this.state.file || "Aucun fichier choisi!"}</p>
           </div>
         </div>
       </Box>
-    )
-
-    const result = (
-      <Box className ='lecteur'>
-        <p className='resultat'>{this.state.result}</p>
+        </CSSTransition>
+      <CSSTransition in={this.state.result != ''} timeout={500}>
+      <Box className ={boxStyles.lecteur}>
+        <p className={styles.resulta}>{this.state.result}</p>
       </Box>
-    )
-    
-    return(
-      <div>
-        { this.state.result ? result : scanner }
-      </div>  
+      </CSSTransition>
+
+      </>  
     );
   }
 } 

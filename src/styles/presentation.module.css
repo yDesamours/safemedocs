@@ -13,6 +13,7 @@
 .presentation_text p{
   font-size : 65px;
   color : #6772E5;
+  text-align : center;
 }
 
 .presentation_text p b{
@@ -27,5 +28,15 @@
 .presentation_image img{
   width : 100%;
   height : auto;
+}
+
+@media screen and (max-width : 800px){
+  .presentation_image{
+    display :none;
+  }
+
+  .presentation_text{
+  width : auto;
+}
 }
 
